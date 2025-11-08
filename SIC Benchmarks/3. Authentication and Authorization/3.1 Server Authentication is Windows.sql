@@ -1,0 +1,1 @@
+SELECT SERVERPROPERTY('IsIntegratedSecurityOnly') as [login_mode];
