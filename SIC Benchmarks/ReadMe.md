@@ -1,0 +1,3 @@
+36 of CIS benchmark Queries 
+Covering some of CIS Surface Area Reduction, Authentication, Authorization, Password Policies, ... 
+and others 
