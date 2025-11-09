@@ -48,10 +48,3 @@ To use a script:
 
 - Review each script before running, as these are intended for auditing only—no modifications are made to your environment.
 - The queries are provided as practical examples based on the CIS Benchmark guidelines. They may require adaptation to specific versions or environments.
-
----
-
-*Original short readme:*
-> 36 of CIS benchmark Queries   
-> Covering some of CIS Surface Area Reduction, Authentication, Authorization, Password Policies, ...  
-> and others
