@@ -5,64 +5,41 @@ This directory contains a set of SQL queries crafted to help assess and enhance 
 ## Directory Structure and Content
 
 - **2. Surface Area Reduction**
-# Surface Area Reduction – CIS Benchmark Queries
-
-This directory contains SQL scripts based on CIS Benchmarks to help minimize the attack surface of your SQL Server instance. Each script audits a specific feature or configuration that, if disabled or restricted, can enhance the security posture of your environment.
-
-## Files and Descriptions
-
-- [2.1 Ad Hoc Distributed Queries.sql](./2.1%20Ad%20Hoc%20Distributed%20Queries.sql)  
+  - [2.1 Ad Hoc Distributed Queries.sql](./2.1%20Ad%20Hoc%20Distributed%20Queries.sql)  
   Checks if the 'Ad Hoc Distributed Queries' feature is enabled. Best practice is to keep this disabled unless specifically required.
-
-- [2.2 CLR Enabled.sql](./2.2%20CLR%20Enabled.sql)  
+  - [2.2 CLR Enabled.sql](./2.2%20CLR%20Enabled.sql)  
   Checks whether the Common Language Runtime (CLR) integration is enabled. Disabling CLR reduces the risk of running unsafe code modules.
-
-- [2.3 Cross DB Ownership Chaining.sql](./2.3%20Cross%20DB%20Ownership%20Chaining.sql)  
+  - [2.3 Cross DB Ownership Chaining.sql](./2.3%20Cross%20DB%20Ownership%20Chaining.sql)  
   Detects if cross-database ownership chaining is enabled, which can inadvertently grant broader database access.
-
-- [2.4 Database Mail XPs.sql](./2.4%20Database%20Mail%20XPs.sql)  
+  - [2.4 Database Mail XPs.sql](./2.4%20Database%20Mail%20XPs.sql)  
   Checks if Database Mail Extended Stored Procedures are enabled. Should be enabled only if database mail functionality is needed.
-
-- [2.5 Ole Automation Procedures.sql](./2.5%20Ole%20Automation%20Procedures.sql)  
+  - [2.5 Ole Automation Procedures.sql](./2.5%20Ole%20Automation%20Procedures.sql)  
   Detects if OLE Automation Procedures are enabled. These should be disabled unless specifically required, due to potential security vulnerabilities.
-
-- [2.6 Remote Access.sql](./2.6%20Remote%20Access.sql)  
+  - [2.6 Remote Access.sql](./2.6%20Remote%20Access.sql)  
   Ensures that remote access (the ability for remote servers to execute stored procedures) is disabled.
-
-- [2.7 Remote Admin Connections.sql](./2.7%20Remote%20Admin%20Connections.sql)  
+  - [2.7 Remote Admin Connections.sql](./2.7%20Remote%20Admin%20Connections.sql)  
   Checks if remote administrative connections are allowed. Should be disabled unless there is a specific need.
-
-- [2.8 Scan For Startup Procs.sql](./2.8%20Scan%20For%20Startup%20Procs.sql)  
+  - [2.8 Scan For Startup Procs.sql](./2.8%20Scan%20For%20Startup%20Procs.sql)  
   Looks for procedures set to run automatically at SQL Server startup (can be potential attack vectors).
-
-- [2.9 Trustworthy Database Property.sql](./2.9%20%20Trustworthy%20Database%20Property.sql)  
+  - [2.9 Trustworthy Database Property.sql](./2.9%20%20Trustworthy%20Database%20Property.sql)  
   Checks if the TRUSTWORTHY property is enabled, which can be abused for privilege escalation.
-
-- [2.10 SQL Server Protocols.sql](./2.10%20SQL%20Server%20Protocols.sql)  
+  - [2.10 SQL Server Protocols.sql](./2.10%20SQL%20Server%20Protocols.sql)  
   Lists enabled SQL Server network protocols. Disabling unused protocols reduces attack surface.
-
-- [2.11 Use non-standard ports.sql](./2.11%20Use%20non-standard%20ports.sql)  
+  - [2.11 Use non-standard ports.sql](./2.11%20Use%20non-standard%20ports.sql)  
   Verifies SQL Server is not listening on the default port (1433). Using non-standard ports helps evade automated attacks.
-
-- [2.12 Hide Instance Option.sql](./2.12%20Hide%20Instance%20Option.sql)  
+  - [2.12 Hide Instance Option.sql](./2.12%20Hide%20Instance%20Option.sql)  
   Checks if the SQL Server instance is set to be hidden from network broadcasts.
-
-- [2.13 SA Login Account is Disabled.sql](./2.13%20SA%20Login%20Account%20is%20Disabled.sql)  
+  - [2.13 SA Login Account is Disabled.sql](./2.13%20SA%20Login%20Account%20is%20Disabled.sql)  
   Ensures the 'sa' (system administrator) login is disabled to protect against brute-force attacks.
-
-- [2.14 SA Login Account Renamed.sql](./2.14%20SA%20Login%20Account%20Renamed.sql)  
+  - [2.14 SA Login Account Renamed.sql](./2.14%20SA%20Login%20Account%20Renamed.sql)  
   Checks that the 'sa' login has been renamed, making it harder for attackers to target.
-
-- [2.15 Using xp_CmdShell.sql](./2.15%20Using%20xp_CmdShell.sql)  
+  - [2.15 Using xp_CmdShell.sql](./2.15%20Using%20xp_CmdShell.sql)  
   Checks if the 'xp_cmdshell' extended stored procedure (which allows command-line access) is enabled. Should be disabled.
-
-- [2.16 DB AUTO_CLOSE is set to OFF.sql](./2.16%20DB%20AUTO_CLOSE%20is%20set%20to%20OFF.sql)  
+  - [2.16 DB AUTO_CLOSE is set to OFF.sql](./2.16%20DB%20AUTO_CLOSE%20is%20set%20to%20OFF.sql)  
   Ensures databases have AUTO_CLOSE disabled. AUTO_CLOSE can introduce performance and possible security issues.
-
-- [2.17 No login with the name 'sa'.sql](./2.17%20No%20login%20with%20the%20name%20'sa'.sql)  
+  - [2.17 No login with the name 'sa'.sql](./2.17%20No%20login%20with%20the%20name%20'sa'.sql)  
   Audits for any logins named 'sa'—should not exist or be disabled/renamed.
-
-- [2.18 clr strict security Server Configuration set to 1.sql](./2.18%20clr%20strict%20security%20Server%20Configuration%20set%20to%201.sql)  
+  - [2.18 clr strict security Server Configuration set to 1.sql](./2.18%20clr%20strict%20security%20Server%20Configuration%20set%20to%201.sql)  
   Verifies that "clr strict security" is enabled for additional CLR safeguards.
 
 - **3. Authentication and Authorization**
