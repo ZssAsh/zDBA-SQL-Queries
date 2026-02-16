@@ -1,5 +1,0 @@
-SELECT name,
-CAST(value as int) as value_configured,
-CAST(value_in_use as int) as value_in_use
-FROM sys.configurations
-WHERE name = 'scan for startup procs';
