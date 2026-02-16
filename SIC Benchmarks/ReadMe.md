@@ -1,4 +1,4 @@
-# SIC Benchmarks – SQL Server Security Best Practices
+# CIS Benchmarks – SQL Server Security Best Practices
 
 This directory contains a set of SQL queries crafted to help assess and enhance your SQL Server instance security in alignment with CIS Benchmarks and security best practices. The queries are grouped into areas corresponding to key security control domains.
 
