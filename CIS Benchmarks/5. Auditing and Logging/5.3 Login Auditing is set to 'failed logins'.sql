@@ -1,0 +1,1 @@
+EXEC xp_loginconfig 'audit level';
